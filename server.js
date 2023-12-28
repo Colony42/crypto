@@ -12,7 +12,7 @@ const path = require('path');
 const axios = require('axios');  // Add this line to import Axios
 
 const CONFIG = require('./scripts/backJS/config.js');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express(); // Create the Express app instance
 
 const updateDatabase = require('./scripts/backJS/updated_DB_coins.js');
