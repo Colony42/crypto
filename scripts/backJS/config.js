@@ -1,6 +1,6 @@
 module.exports = {
-   host : 'sql11.freesqldatabase.com',
-   user : 'sql11673305',
-   password : 'McbHbTWsjJ',
-   database : 'sql11673305'
+   host : 'sql213.infinityfree.com',
+   user : 'if0_35691160',
+   password : 'VK2004on',
+   database : 'if0_35691160_db_cry'
 }
