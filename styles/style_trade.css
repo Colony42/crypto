@@ -1,0 +1,46 @@
+.full-trading-view {
+   width:100%;
+   height:100%;
+}
+
+body {
+   margin: 0;
+   padding: 10;
+   display: flex;
+   justify-content: flex-start; /* Start from the top */
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+   background-color: #0C151C;
+}
+
+
+ /* Style the vertical scrollbar (for webkit-based browsers) */
+body::-webkit-scrollbar {
+   width: 6px; /* Set the width of the vertical scrollbar */
+   height: 6px;
+ }
+ 
+ /* Style the vertical scrollbar thumb (for webkit-based browsers) */
+ body::-webkit-scrollbar-thumb {
+   background-color: #ffffff; /* Background color of the thumb */
+   border-radius: 10px; /* Rounded corners for the thumb */
+ }
+ 
+ /* Style the vertical scrollbar track (for webkit-based browsers) */
+ body::-webkit-scrollbar-track {
+   background-color: #0C151C; /* Background color of the track */
+   border-radius: 10px;
+ }
+ 
+ /* Hide the horizontal scrollbar (for webkit-based browsers) */
+ body::-webkit-scrollbar-horizontal {
+   display: none;
+ }
+ 
+ /* Style the vertical scrollbar (for Mozilla-based browsers) */
+ body {
+   scrollbar-width: thin; /* Set the width of the vertical scrollbar */
+   scrollbar-color: #0C151C; rgba(0, 190, 260, 0.2); /* Thumb and track colors */
+ }
+ 

@@ -1,0 +1,1243 @@
+
+ .button {
+  position: absolute;
+  width: auto;
+  height: 30px;
+  display: flex;
+  color: #E4E5EA;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  --hover-shadows: 10px 10px 13px #0C151C,
+                   -10px -10px 13px #E4E5EA;
+
+ --accent: fuchsia;
+ letter-spacing: 0.01em;
+ border: none;
+ border-radius: 1.1em;
+ background-color: #0C151C;
+ padding: 0.5em 0.5em;
+ transition: box-shadow ease-in-out 0.3s,
+             background-color ease-in-out 0.1s,
+             letter-spacing ease-in-out 0.1s,
+             transform ease-in-out 0.1s;
+ box-shadow: 3px 3px 1px #0C151C,
+             -3px -2px 2px #E4E5EA;
+}
+
+button:hover {
+ box-shadow: var(--hover-shadows);
+}
+
+button:active {
+ box-shadow: var(--hover-shadows),
+              var(--accent) 0px 0px 10px 15px;
+ background-color: var(--accent);
+ transform: scale(0.95);
+}
+
+ .trade {
+  position: relative; 
+  top: 0; /* Stick to the top of the viewport */
+  width: 100%; /* Full width of the viewport */
+  box-shadow: 0px 10px 15px rgba(0, 190, 260, 0.2);
+  
+  
+  border-bottom:2px ridge #E4E5EA;
+  
+  
+  z-index: 1100;
+ }
+
+ .currency-dropdown select {
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px solid #D2D2D4;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  padding: 3px 5px;
+  overflow: hidden;
+  position: static;
+  margin-right: 120px;
+}
+#portfolio-name {
+  margin-left: 250px;
+  position: static;
+}
+
+.currency-dropdown select:hover{
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+
+ }
+
+ .input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  top: -75%;
+  width: 95.5%; /* Expand to full width */
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -65%;
+  width: 95.5%; /* Expand to full width */
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+ .button:hover{
+  background-color: #16354D;
+  border: 2px solid #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+ }
+
+ .portfolio-container {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .header_choose_coin {
+  position: relative;
+  top: -9%;
+  width: 95%;
+  height: 10%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-around;
+  background-color: #0C151C;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  text-align: center;
+  color: #fff;
+  padding: 1px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 1px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+}
+
+.header_portfolio_settings {
+  position: relative;
+  margin: 10px;
+  width: 95%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0C151C;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+}
+
+.add_btn_and_color {
+  position: relative;
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  width: 95%;
+  height: 10%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-around;
+  background-color: #0C151C;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  text-align: center;
+  color: #fff;
+  padding: 1px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  
+  
+  
+  border-bottom: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+}
+
+.input_and_color {
+   display: flex;
+   flex-direction: row;
+   
+   
+}
+
+.input-field-portfolio-settings{
+  width: 40%; /* Expand to full width */
+  height: fit-content;
+  
+  margin-top: 24px;
+  margin-left: 20px;
+  display: flex;
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px solid #D2D2D4;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4px;
+ 
+}
+
+ .input-field {
+  display: flex;
+  position: relative;
+  top: -90%;
+  width: 95.5%; /* Expand to full width */
+  height: fit-content;
+  margin: 5px 0; /* Add vertical spacing */
+   padding: 10px;
+   font-size: 16px;
+   border-radius: 20px;
+   margin-bottom: 20px;
+  
+   background-color: #0C151C;
+   color: #fff;
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   
+   
+ }
+
+ .body-search-box {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+ .input-field:hover{
+   border: 2px solid #ffffff;
+   transition: box-shadow 0.3s ease-in-out;
+ }
+
+
+ body {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: flex-start; /* Start from the top */
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+   background: linear-gradient(45deg,#0C151C,#0C151C, rgb(46,87,103));
+      animation: gradient 30s ease infinite;
+      background-size: 400% 400%;
+      
+ }
+
+ header {
+   position: relative; /* Fixed position */
+   top: 0; /* Stick to the top of the viewport */
+   left: 0;
+   right: 0;
+   width: 100%; /* Full width of the viewport */
+   height: auto;
+   border-top: 1px solid rgba(0, 190, 260, 0.2); /* Add a top border */
+   border-bottom: 1px solid rgba(0, 190, 260, 0.2); /* Add a bottom border */
+   display: flex;
+   flex-direction: row;
+   align-items: baseline;
+   justify-content: space-around;
+   background-color: #0C151C;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+   text-align: center;
+   color: #fff;
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 14px;
+   overflow: hidden;
+   padding-bottom: 50px;
+   margin-bottom: 10px;
+   z-index: 1000;
+ }
+ 
+
+
+
+ .add_skip_buttons {
+  position: relative;
+  top: 40px; /* Adjust the top value based on your header's height */
+  width: 100%;
+  z-index: 1000;  
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;
+  border: 1px solid #D2D2D4;
+}
+
+
+
+
+
+.add-crypto {
+
+  margin-right: 130px; /* Add space to the right of the "Add Crypto" button */
+}
+
+.skip-add-crypto {
+  margin-right: 40px;
+}
+
+.portfolio-settings-add-crypto {
+  margin-right: 315px;
+}
+
+ .back {
+  position: static;
+  margin: 10px;
+  
+ }
+
+ .back:hover {
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+ }
+
+  .add-crypto:hover{
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+  }
+
+ 
+
+  .skip-add-crypto:hover{
+    border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .add-item-group{
+    width: 90%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+
+  .add-item-group:hover {
+    background-color: #ff6;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #ff6;
+  transition: box-shadow 0.5s ease-in-out;
+  }
+
+  .portfolio-settings-add-crypto:hover{
+    border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  }
+
+/* Styles for the modal dialog */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
+  backdrop-filter: blur(3px); /* Apply blur effect */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 400px;
+  width: 400px;
+  background-color: #0C151C;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 190, 260, 0.2);
+  color: #fff;
+  padding: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   position: absolute; /* Relative positioning for containing absolute elements */
+}
+
+.portfolio-settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
+  backdrop-filter: blur(3px); /* Apply blur effect */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.portfolio-settings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Start from the top */
+  height: auto;
+  width: 400px;
+  background-color: #0C151C;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 190, 260, 0.2);
+  color: #fff;
+  padding: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   position: absolute; /* Relative positioning for containing absolute elements */
+}
+
+.settings-portfolio-box-form {
+  
+  width: 100%;
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  
+}
+
+.slider-container {
+  
+  width: 93%;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 6px;
+  
+}
+
+.color-picker-container {
+  
+  width: 40%;
+  height: 45px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 24px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 16px;
+}
+
+
+
+.exit-add-crypto-box{
+  position: absolute;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.exit-settings-portfolio-box{
+  position: absolute;
+    cursor: pointer;
+    margin-left: 5px; 
+}
+
+p {
+  margin: 0; /* Remove any margins */
+  
+}
+
+h4 {
+  margin: 0; /* Remove any margins */
+  margin-left: 109px;
+}
+
+.total-percentage {
+  height: 14px;
+  display: flex;
+   background-color: #0C151C;
+   color: #E4E5EA;
+   justify-content: center;
+  align-items: center;
+   font-weight: bold;
+   border-radius: 15px;
+   border: 2px solid #D2D2D4;
+   cursor: pointer;
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 16px;
+   padding: 6px;
+  margin-right: 5px; 
+}
+
+.exit-add-crypto-box:hover{
+  background-color: #ff6060;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #ff6060;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.exit-settings-portfolio-box:hover {
+  background-color: #ff6060;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #ff6060;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button.buy{
+  width: 125px;
+  display: flex;
+  margin-top: 5px;
+  margin-right: 1px;
+  margin-left: 1px;
+  left: 1px;
+}
+
+.button.buy:hover{
+  background-color: #53fa90;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #53fa90;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button.sell{
+  
+  width: 125px;
+  display: flex;
+  margin-top: 5px;
+  margin-right: 1px;
+  right: 1px;
+}
+
+.button.sell:hover{
+  background-color: #ff6060;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #ff6060;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button.add {
+  width: 100px;
+  display: flex;
+  margin-top: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+
+}
+
+.button.add:hover {
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.amountInput{
+  width: 155px;
+  height: fit-content;
+  padding: 5px;
+  font-size: 14px;
+  border: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+  background-color: #0C151C;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+.amountInput:hover{
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.valueInput{
+  width: 155px;
+   height: fit-content;
+   padding: 5px;
+   font-size: 14px;
+  border: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+  background-color: #0C151C;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+.valueInput:hover{
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  background-color: #0C151C;
+  margin-top: 25px;
+  z-index: 1;
+  overflow: scroll;
+  
+  border-radius: 10px;
+}
+
+.dropdown-item{
+  display: flex;
+  justify-content: space-between; /* Align items to the right */
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ffffff;
+  margin-top: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #ffffff; /* Change the background color on hover */
+  color: #0C151C; /* Change the text color on hover */
+  border: 2px solid #fffffd;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/* Style the vertical scrollbar (for webkit-based browsers) */
+.dropdown-list,::-webkit-scrollbar {
+  display:none;
+}
+
+/* Style the vertical scrollbar thumb (for webkit-based browsers) */
+.dropdown-list::-webkit-scrollbar-thumb {
+  display:none;
+}
+
+/* Style the vertical scrollbar track (for webkit-based browsers) */
+.dropdown-list::-webkit-scrollbar-track {
+  display:none;
+}
+
+/* Hide the horizontal scrollbar (for webkit-based browsers) */
+.dropdown-list::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
+/* Style the vertical scrollbar (for Mozilla-based browsers) */
+.dropdown-list {
+  scrollbar-width: thin; /* Set the width of the vertical scrollbar */
+  scrollbar-color: #888 #333; /* Thumb and track colors */
+}
+
+/* Hide the horizontal scrollbar (for Mozilla-based browsers) */
+.dropdown-list {
+  overflow-x: hidden;
+}
+
+/* Add this CSS to your existing styles or your external CSS file */
+.transaction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-list li {
+  display: inline-block; /* Make list items inline */
+}
+
+#transactionTable {
+  position: relative;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 1px solid rgba(0, 190, 260, 0.2);
+  border-bottom: 1px solid rgba(0, 190, 260, 0.2);
+  background-color: #102636;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+#transactionTable th {
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Increased z-index to be above the tbody */
+  background-color: #0C151C;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px solid rgba(0, 190, 260, 0.2);
+  border-bottom: 1px solid rgba(0, 190, 260, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+
+#transactionTable th:first-child, td:first-child {
+  
+  text-align: start;
+}
+
+#transactionTable th:first-child {
+  margin-left: 20px;
+  text-align: center;
+  
+}
+
+#transactionTable td {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 15px;
+  overflow: auto; /* Change to auto for vertical scroll */
+  margin-right: -20px;
+}
+
+
+
+/* Add this CSS to your stylesheet to change cursor to pointer for table rows */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Remove unnecessary overflow properties from the following rules */
+table, td {
+  border-top: 2px solid rgba(0, 190, 260, 0.2);
+  border-bottom: 2px solid rgba(0, 190, 260, 0.2);
+}
+
+
+
+
+
+
+
+ @keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.slider-container, .color-picker-container {
+  margin-top: 10px;
+  display: relative;
+  position: flex;
+  border-radius: 15px;
+}
+
+.slider-container{
+  border-bottom: 2px solid rgba(0, 190, 260, 0.2);
+  border-top: 2px solid rgba(0, 190, 260, 0.2);
+}
+
+/* Style the slider */
+input[type="range"] {
+  width: 100%;
+}
+
+/* Style the color picker */
+input[type="color"] {
+  width: 100%;
+}
+
+.settings-portfolio-box-item-contaner {
+  display: flex; /* Display buttons in a row */
+  flex-wrap: wrap; /* Allow buttons to wrap to a new line */
+  max-height: 400px; /* Adjust the max height as needed */
+  max-width: 400px; /* Adjust the max width as needed */
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 10px;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  justify-content: start;
+  align-items: center;
+}
+
+.portfolio-button {
+  display: flex; /* Display buttons in a row */
+  height: 30px;
+  margin-right: 10px; /* Add spacing between buttons */
+  background-color: #0C151C; /* Adjust button background color */
+  color: #E4E5EA; /* Adjust button text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  line-height: 40px; /* Center button text vertically */
+  font-weight: bold;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px solid #E4E5EA;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.portfolio-button:hover {
+ border: 2px solid rgba(0, 190, 260, 1);
+  color: #0C151C;
+  background-color: #0C151C;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+ 
+/* Style for the buttons inside settings-portfolio-box-item-contaner */
+.settings-portfolio-box-item-contaner .portfolio-button {
+  display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #0C151C;
+  color: #0C151C;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  line-height: 0px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 13px;
+  font-family: Montserrat;
+  font-style: normal;
+ 
+  overflow: hidden; /* Hide overflow text */
+
+  max-width: 100%; /* Limit button width to the container width */
+}
+
+.settings-portfolio-box-item-contaner .portfolio-button: hover {
+  border: 2px solid rgba(0, 190, 260, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Ensure a maximum of 5 buttons are displayed on each line */
+.settings-portfolio-box-item-contaner .portfolio-button:nth-child(5n+1) {
+  clear: left; /* Start a new line for every 5th button */
+}
+
+
+
+/* Apply margin-top to all direct children of .settings-portfolio-box-form */
+.settings-portfolio-box-form > * {
+  top: 20px;
+  
+}
+
+.delete-button{
+  
+  margin-left:5px;
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-weight: bold;
+  border-radius: 100%;
+  border-radius: 15px;
+  
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button:hover {
+  background-color: #ff6060;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #ff6060;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.action-cell{
+  display: flex; /* Display buttons in a row */
+  flex-wrap: wrap; /* Allow buttons to wrap to a new line */
+  max-height: 60px; /* Adjust the max height as needed */
+  max-width: 100px; /* Adjust the max width as needed */
+  margin-left: 5px;
+  margin-right: -60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid rgba(0, 190, 260, 0.2);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 10px;
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.new-row {
+ 
+  box-shadow: 0 2px 10px rgba(0, 190, 260, 0.2);
+}
+
+.ellipsis-button,.basket-button {
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-weight: bold;
+  border-radius: 100%;
+  border-radius: 15px;
+  border: 2px solid #D2D2D4;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-button {
+  margin-left:10px;
+}
+
+.group-in-table-button {
+  margin-top: 10px;
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-weight: bold;
+  border-radius: 100%;
+  border-radius: 15px;
+  border: 2px solid #D2D2D4;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-button:hover {
+  background-color: #ff6060;
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  box-shadow: 0px 0px 15px #ff6060;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ellipsis-button:hover {
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.group-in-table-button:hover {
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.add-button {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.add-button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0px 0px 15px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Initially hide the transaction details */
+.transaction-details {
+  position: fixed;
+  color: #E4E5EA;
+  width: 200px;
+  height: 150px;
+  background-color: #0C151C;
+  border-radius: 15px;
+  border: 2px solid #D2D2D4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Ensure it appears above other content */
+  display: none; /* Initially hide the element */
+  justify-content: space-around;
+  align-items: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+
+
+.transaction-details:hover {
+  color: #0C151C;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 15px #ffffff;
+}
+  
+/* Corrected selector for the close button */
+#closeTransactionDetails {
+  margin-left: 10px;
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-weight: bold;
+  border-radius: 100%;
+  border-radius: 15px;
+  border: 2px solid #D2D2D4;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.crypto-list-modal {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start; /* Start from the top */ 
+  position: fixed; /* Use fixed positioning for centering */
+  top: 50%; /* Move the top edge to the middle of the viewport */
+  left: 50%; /* Move the left edge to the middle of the viewport */
+  transform: translate(-50%, -50%); /* Center the element exactly */
+  height: 500px;
+  width: 420px;
+  background-color: #0C151C;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 190, 260, 0.2);
+  color: #fff;
+  padding: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1000;
+  overflow: auto;
+}
+
+
+
+#__k{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 12px;
+}
+
+.close-modal-button {
+  position: absolute;
+  left: 330px;
+  top: 32px;
+  width: auto;
+  height: 30px;
+  display: flex;
+  background-color: #0C151C;
+  color: #E4E5EA;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid #D2D2D4;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content h3 {
+  margin-left: 10px;
+  height: auto
+
+}
+
+.close-modal-button:hover{
+  border: 2px solid #0C151C;
+  color: #0C151C;
+  background-color: #ff6060;
+  box-shadow: 0px 0px 15px #ff6060;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.highlighted {
+  background-color: /* Your highlight color here */;
+}
+
+.list-item {
+  cursor: pointer; /* Set the cursor to pointer for the list items */
+  width: auto;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.info-block {
+  position: relative;
+  top: 70px; /* Adjust the top value based on your header's height */
+  width: 100%;
+  z-index: 1;  
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;
+  
+}
+
+.distribution-window {
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start; /* Start from the top */ 
+  width: 350px;
+  height: 200px;
+  position: relative;
+  margin: 15px;
+  margin-right: 35px;
+  display: flex;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #0C151C;
+  box-shadow: 0px 10px 15px rgba(0, 190, 260, 0.2);
+  border-left: 2px solid #ffffff;
+  border-right:2px solid #ffffff;
+  border-bottom:2px ridge rgba(0, 190, 260, 0.2);
+  border-top:2px ridge rgba(0, 190, 260, 0.2);
+  color: #fff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  overflow: auto;
+}
+ 
+
+.disabled-row {
+  opacity: 0.5; /* Reduce opacity to visually indicate it's disabled */
+  pointer-events: none; /* Disable pointer events so it's not clickable */
+  /* Add any other styles you want for disabled rows */
+}

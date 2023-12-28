@@ -1,0 +1,283 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style_portfolio.css">
+  <title>Colony - Your Portfolio</title>
+</head>
+
+<body>
+
+  
+<div class="trade">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Следите за рынками на TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "Solana",
+      "proName": "BINANCE:SOLUSDT"
+    },
+    {
+      "description": "XRP",
+      "proName": "BINANCE:XRPUSDT"
+    },
+    {
+      "description": "LTC",
+      "proName": "BINANCE:LTCUSDT"
+    },
+    {
+      "description": "Matic",
+      "proName": "BINANCE:MATICUSDT"
+    },
+    {
+      "description": "AVAX",
+      "proName": "BINANCE:AVAXUSDT"
+    },
+    {
+      "description": "PEPE",
+      "proName": "BINANCE:1000PEPEUSDT.P"
+    },
+    {
+      "description": "Arbitrum",
+      "proName": "BINANCE:ARBUSDT"
+    },
+    {
+      "description": "Aptos",
+      "proName": "BINANCE:APTUSDT.P"
+    },
+    {
+      "description": "RUNE",
+      "proName": "BINANCE:RUNEUSDT.P"
+    },
+    {
+      "description": "TON",
+      "proName": "OKX:TONUSDT"
+    },
+    {
+      "description": "APECOIN",
+      "proName": "BINANCE:APEUSDT"
+    },
+    {
+      "description": "AAVE",
+      "proName": "BINANCE:AAVEUSDT"
+    },
+    {
+      "description": "Polkadot",
+      "proName": "BINANCE:DOTUSDT"
+    },
+    {
+      "description": "Cardano",
+      "proName": "BINANCE:ADAUSDT"
+    },
+    {
+      "description": "DogeCoin",
+      "proName": "BINANCE:DOGEUSDT"
+    },
+    {
+      "description": "LiteCoin",
+      "proName": "BINANCE:LTCUSDT"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "displayMode": "regular",
+  "locale": "ru"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+ 
+  <header>
+    <button class="button back" onclick="goBack()">Back</button>
+  
+    <div class="currency-dropdown">
+      <select id="currencySelect" onchange="selectCurrency()">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+      </select>
+    </div>
+  
+    <div id="__k">
+      <span>Current Balance</span>
+    </div>
+  
+    <p id="portfolio-name"></p>
+    <p id="portfolio-type"></p>
+  </header>
+
+  
+
+  <div class="add_skip_buttons">
+    <button class="button skip-add-crypto" onclick="goHistoryPage()">History</button>
+    <button class="button add-crypto" onclick="openModal()">+ Add Transaction</button>
+    <button class="button portfolio-settings-add-crypto" onclick="openPorfolioSettings()">% Settings</button>
+  </div>
+
+ 
+  <div class="info-block">
+    <div class="distribution-window">
+        
+    </div>
+  </div>
+  
+  
+    
+      <table id="transactionTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th id="holdings-header">Holdings</th>
+            <th>How much to buy</th>
+            <th>How much surplus</th>
+            <th id="avg-price-${cryptoName}">Avg. buy price</th>
+            <th>Profit/Loss</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% transactions.forEach(transaction => { %>
+            <tr>
+              <th><%= transaction.name %></th>
+              <th></th>
+              <th><%= transaction.holdings %></th>
+              <th></th>
+              <th></th>
+              <th><%= transaction.avg %></th>
+              <th></th>
+              <th></th>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    
+  
+
+
+
+  <div class="crypto-list-modal">
+    
+    <button class="close-modal-button">Close</button>
+  </div>
+
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <div class="header_choose_coin">
+            <p>Choose Coin</p>
+            <button class="button exit-add-crypto-box" onclick="closeModal()">Close</button>
+        </div>
+
+        <div class="body-search-box">
+            <input type="search" class="input-field" placeholder="Search cryptocurrency..." id="crypto-search" required>
+            <div class="dropdown-list"></div>
+            <div class="input-container">
+                <input type="number" class="amountInput" placeholder="Amount" name="amount" required>
+                <input type="number" class="valueInput" placeholder="Value" name="value" required>
+            </div>
+            <div class="button-container">
+                <button class="button buy" onclick="setTransactionType('Buy')">Buy</button>
+                <button class="button sell" onclick="setTransactionType('Sell')">Sell</button>
+                <button class="button add">Add</button>
+            </div>
+            <p>Total: <span id="totalValue">0</span></p>
+            <input type="hidden" name="timestamp" value="<%= new Date().toISOString().slice(0, 19).replace('T', ' ') %>" required>
+            <input type="hidden" name="name" id="crypto-name">
+        </div>
+    </div>
+</div>
+
+
+
+ <div class="transaction-details">
+  
+  <!-- Your transaction details content here -->
+  
+</div>
+
+  <div class="portfolio-settings-overlay" id="portfolioSettingsOverlay">
+    <div class="portfolio-settings-content">
+      
+      <div class="header_portfolio_settings">
+
+        <button class="button exit-settings-portfolio-box" onclick="closePorfolioSettings()">Close</button>
+        
+        <h4>Portfolio Settings</h4>
+
+        <span class="total-percentage">100%</span>
+      </div>
+
+      <div class="settings-portfolio-box-item-contaner">
+        
+      </div>
+      
+      <div class="settings-portfolio-box-form">
+        
+        
+        <div class="slider-container">
+          <label for="percentage-slider">Select Percentage:</label>
+          <input type="range" id="percentage-slider" min="0" max="100" step="1" value="0">
+          <span id="selected-percentage">50%</span>
+        </div>
+
+        <div class="add_btn_and_color">
+
+          <div class="input_and_color">
+            
+            <input type="text" class="input-field-portfolio-settings" id="group-name" placeholder="Enter group name..." maxlength="10">
+
+            <div class="color-picker-container">
+            <label for="color-picker">Select Color:</label>
+            <input type="color" id="color-picker" value="#FF0">
+
+          </div>
+
+        </div>
+
+          
+        <button class="button add-item-group">+ Add group</button>
+
+        </div>
+
+        
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="scripts/backJS/add_tr_to_history.js"></script>
+  <script src="scripts/backJS/add_data_from_TBFron_to_DB.js"></script>
+  
+  <script src="scripts/portfolio_JS/portfolio.js"></script>
+  <script src="scripts/portfolio_JS/coingecko.js"></script>
+  <script src="scripts/portfolio_JS/add_trans_to_table.js"></script>
+
+  <script src="scripts/portfolio_JS/creating_GROUPS/creating_group.js"></script>
+  <script src="scripts/portfolio_JS/creating_GROUPS/main_group_script.js"></script>
+  <script src="scripts/portfolio_JS/creating_GROUPS/helpfull_system.js"></script>
+
+  <script src="scripts/portfolio_JS/history_system.js"></script>
+  <script src="scripts/portfolio_JS/other_systems.js"></script>
+  <script src="scripts/portfolio_JS/distribution_window.js"></script>
+  <script src="scripts/portfolio_JS/profit_loss.js"></script>
+
+</body>
+</html>

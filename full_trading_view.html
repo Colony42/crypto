@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style_trade.css">
+  <title>Colony - Real time graphics</title>
+  
+</head>
+<body>
+  <div class="full-trading-view">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div id="tradingview_0cf12"></div>
+          <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Следите за рынками на TradingView</span></a></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget(
+          {
+            "width": 1903,
+            "height": 923,
+          "symbol": "BINANCE:BTCUSDT",
+          "interval": "D",
+          "timezone": "Europe/Moscow",
+          "theme": "dark",
+          "style": "1",
+          "locale": "ru",
+          "enable_publishing": true,
+          "withdateranges": true,
+          "hide_side_toolbar": false,
+          "allow_symbol_change": true,
+          "details": true,
+          "hotlist": true,
+          "calendar": true,
+          "container_id": "tradingview_0cf12" 
+        }
+          );
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+
+    <script></script>
+</body>
+</html>

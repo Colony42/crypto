@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style_detals.css">
+  <title>Colony - Transaction details</title>
+  
+</head>
+<body>
+  <header>
+
+    
+    <button class="button back" onclick="goBack()">Back</button>
+  
+    <div class="currency-dropdown">
+      <select id="currencySelect" onchange="selectCurrency()">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+      </select>
+    </div>
+  
+    <div id="__k">
+      <span>Current Balance</span>
+    </div>
+  
+    <p id="portfolio-name"></p>
+    <p id="portfolio-type"></p>
+  </header>
+
+
+  <div class="crypto_item_box_details">
+    <div class="table-container_details">
+      <table id="transactionTable_details" class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Value</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transaction data rows will be added here using JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+  <script src="scripts/details.js"></script>
+</body>
+</html>

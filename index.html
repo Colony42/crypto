@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colony - Start</title>
+  <link rel="stylesheet" href="styles/style_start.css">
+</head>
+
+<body>
+
+  
+
+  <header>
+    
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Следите за рынками на TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Биткоин"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Эфириум"
+    },
+    {
+      "description": "Евро",
+      "proName": "FX_IDC:EURRUB"
+    },
+    {
+      "description": "Доллар",
+      "proName": "FX_IDC:USDRUB"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "displayMode": "fixed",
+  "locale": "ru",
+  "largeChartUrl":"http://127.0.0.1:5500/full_trading_view.html"
+}
+  </script>
+
+</div>
+<!-- TradingView Widget END -->
+  </header>
+
+  <!-- User header -->
+<div class="user-header">
+
+
+
+  <div class="user-info" id="user-info">
+    <!-- Display user email here -->
+    <span id="user-email"></span>
+  </div>
+  
+  <div id="logout-btn-container">
+
+    <button class="button-login" id="button login">Log In</button>
+
+    <!-- Button to log out -->
+    <button class="button-logout" id="button logout">Log Out</button>
+  </div>
+</div>
+
+
+  
+<div class="button-descriptions">
+      <!-- Add descriptions here -->
+      <p class="born-hodl-description"> 1 of 5 Born hodl
+
+        This is the lowest risk level of recommendations from AI, AI will take only 5 coins from the top 30 cryptocurrencies by capitalization and will select those that have not been in the red for the last 5 years, and that have generally existed for more than 5 years. Also adding 50% in Crypto stablecoins, or just in fiat currency, as the client chooses. You also need to make some kind of built-in bot that would steam the activity of the crypto project in the social networks.</p>
+      
+        <p class="risky-hodler-description"> 2 of 5 Risky hodler
+
+          The recommendation will already consist of 10 coins from the top 50 list by capitalization. The project must be at least more than 3 years on the market, and over the past 3 years it must be in the black. In stablecoins or in fiat currency 25%.
+          
+          **And since this portfolio is slightly riskier than the previous one, the distribution between the coins will be unequal, at 25% in cash, 50% in the first 5 cryptocurrencies by capitalization, and the remaining 25% in the next 5 coins.**</p>
+      
+      <p class="need-more-risk-description"> 3 of 5 Need more risk
+
+        This recommendation will include 15 coins from the top 100 by capitalization. And projects that are more than a year old, 5 of which are the first in terms of capitalization, are older than 5 years, and are in the black.
+        
+        **10% in fiat, stablecoins. The first 5 coins will have 40%, the next 5 will have 25%, and the last 5 will also have 25%**</p>
+
+      <p class="real-cryptomen-description"> 4 of 5 Real cryptomen Now a list of 30 coins will make up 80% of the portfolio, no cash. A list of the top 300 coins, the first 10 coins are over 5 years old and are in the black, the next 10 are over 3 years old and are in the black from the start. And the last 10 coins are over a year old.
+
+      The first 10 will account for 40%, the second 25%, and the last 15%. 
+      20% On coin lists and launchpads.</p>
+
+      <p class="pro-description"> 5 of 5 Pro
+
+      Здесь уже будет платный раздел, в котором будут проекта на стадии ico и подобные, но также будут уже и имеющиеся проекты, состоявшийся и новые, также лаунчпады на криптобиржах, полка стартер, коин лист и подобные.
+
+      Also 30 cryptocurrencies, only from the top 1000, and not 80%, but 70, the remaining 30%, this is also a coinlist, launchpads, a starter shelf, and already closed icos available by subscription.
+      40% for the first ten, 20% for the second
+      10% off last</p>
+    </div>
+
+  <button class="back-button" onclick="goBack()">Back</button>
+
+<div class="container" id="portfolioPac">
+
+<div class="error_hint" id="errorHint">Please select a portfolio type and enter a name.</div>
+
+  <!-- Create a div to display portfolio information -->
+  <button class="portfolio-info" id="portfolioInfo" onclick="goToCreatePortfolioPage()"></button>
+  
+  <!-- Move button_create_start lower -->
+  <button class="button_create_start" id="portfolioCreate">+</button>
+
+  <div class="button-container transition-effect">
+    <button class="button currency" data-type="Currency" >Currency (soon)</button>
+    <button class="button stocks" data-type="Stocks" >Stocks (soon)</button>
+    <button class="button crypto" data-type="Crypto" onclick="showPortfolioInput(event)">Crypto</button>
+    
+    <div class="additional-buttons" style="display: none;">
+      <button class="button born-hodl" data-type="Born Hodl">Born hodl</button>
+      <button class="button risky-hodler" data-type="Risky Hodler">Risky hodler</button>
+      <button class="button need-more-risk" data-type="Need More Risk">Need more risk</button>
+      <button class="button real-cryptomen" data-type="Real Cryptomen">Real cryptomen</button>
+      <button class="button pro" data-type="Pro">Pro</button>
+    </div>
+    
+  </div>
+
+  <div class="portfolio-container transition-effect">
+    <input type="text" class="input-field" id="portfolio-name" placeholder="Enter portfolio name">
+    <button class="create-button" onclick="createPortfolio()">Create</button>
+  </div>
+
+</div>
+
+
+
+<div class="vidget" id="vidTrade">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Следите за рынками на TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": "100%",
+  "height": "100%",
+  "defaultColumn": "overview",
+  "screener_type": "crypto_mkt",
+  "displayCurrency": "USD",
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "locale": "ru",
+  "largeChartUrl":"http://127.0.0.1:5500/full_trading_view.html"
+  
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+
+
+
+<div class="wrapper" id="loginRegModal">
+  <div class="card-switch">
+      <label class="switch">
+         <input type="checkbox" class="toggle">
+         <span class="slider"></span>
+         <span class="card-side"></span>
+         <div class="flip-card__inner">
+            <div class="flip-card__front">
+               <div class="title">Log in</div>
+               <form class="flip-card__form" action="">
+                  <input class="flip-card__input" name="email" placeholder="Email" type="email" id="logEmail">
+                  <input class="flip-card__input" name="password" placeholder="Password" type="password" id="logPass">
+                  <button class="flip-card__btn" type="button" id="loginBtn">Let's go!</button>
+               </form>
+            </div>
+            <div class="flip-card__back">
+               <div class="title">Sign up</div>
+               <form class="flip-card__form" action="">
+                  <input class="flip-card__input" placeholder="Name" type="name" id="regName">
+                  <input class="flip-card__input" name="email" placeholder="Email" type="email" id="regEmail">
+                  <input class="flip-card__input" name="password" placeholder="Password" type="password" id="regPassword">
+                  <button class="flip-card__btn" id="regButton" type="button">Confirm</button>
+               </form>
+            </div>
+         </div>
+      </label>
+  </div>   
+</div>
+
+
+<script src="scripts/backJS/users.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/scripts/backJS/users.js"></script>
+
+ </body>
+ 
+ </html>
