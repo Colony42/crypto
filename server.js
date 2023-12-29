@@ -64,7 +64,7 @@ app.get('/create_portfolio.html', (req, res) => {
     // Redirect or handle unauthorized access
     console.log("error", userId);
     
-    res.redirect('/login'); // Redirect to login page if userId is not available
+    res.redirect('/index'); // Redirect to login page if userId is not available
     return;
   }
 
